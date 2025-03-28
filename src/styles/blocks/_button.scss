@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.button,
+.button:link,
+.button:visited {
+  display: inline-flex;
+  justify-content: center;
+  padding: 8px 20px;
+  color: var(--color-darker);
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  white-space: nowrap; // текст в кнопке не перносится
+  border-radius: 32px;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    outline: 2px solid var(--color-dark);
+    outline-offset: 2px;
+  }
+
+  &.button--full-width {
+    width: 100%;
+    padding: 13px 24px;
+    text-align: center;
+  }
+
+  &.button.button--disabled {
+    background-color: var(--color-light-gray);
+    cursor: not-allowed;
+  }
+}

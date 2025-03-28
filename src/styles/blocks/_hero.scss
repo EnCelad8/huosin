@@ -1,0 +1,49 @@
+@use '../helpers' as *;
+
+.hero {
+  position: relative;
+  background-color: var(--color-background);
+  padding-top: 100px;
+
+  &__body {
+    max-width: 54%;
+  }
+
+  &__title {
+    font-size: 140px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: var(--color-black);
+    text-shadow: -6px 1px 4px rgba(57, 55, 54, 0.65);
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 38px;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    text-shadow: -2px -1px 2px rgba(57, 55, 54, 0.15);
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    color: var(--color-off-white);
+    font-weight: 400;
+    font-size: 20px;
+    text-shadow: -1px 0 1px rgba(255, 252, 240, 0.4);
+    margin-bottom: 44px;
+  }
+
+  &__image-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}

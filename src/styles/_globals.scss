@@ -1,0 +1,31 @@
+@use 'helpers' as *;
+
+body {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  color: var(--color-light-gray);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+
+  &:hover:not(:has(img)) {
+    opacity: 0.5;
+  }
+}
+
+// :focus-visible {
+//   outline: 2px dashed var(--color-light);
+//   outline-offset: 4px;
+//   transition-duration: 0s !important;
+// }

@@ -1,0 +1,43 @@
+@use '../helpers' as *;
+
+.header {
+  position: absolute;
+  // width: 100%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--color-background);
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 36px;
+    color: var(--color-darker);
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      gap: 52px;
+    }
+
+    &-link {
+      padding: 8px 16px;
+      font-family: var(--font-family-accent);
+      color: inherit;
+
+      &.is-active {
+        border: 1px solid var(--color-dark);
+        border-radius: 20px;
+      }
+    }
+  }
+}
