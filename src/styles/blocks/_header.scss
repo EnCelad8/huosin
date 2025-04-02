@@ -2,11 +2,10 @@
 
 .header {
   position: absolute;
-  // width: 100%;
   right: 0;
   left: 0;
-  z-index: 1;
-  background-color: var(--color-background);
+  z-index: 10;
+  // background-color: var(--color-background);
 
   &__body {
     display: flex;

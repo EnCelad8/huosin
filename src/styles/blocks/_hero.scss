@@ -1,12 +1,32 @@
 @use '../helpers' as *;
 
 .hero {
-  position: relative;
-  background-color: var(--color-background);
+  // background-color: var(--color-background);
   padding-top: 100px;
 
+  &__inner {
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   inset: 0;
+    //   background: linear-gradient(
+    //     -90deg,
+    //     rgba(255, 255, 255, 0) 0%,
+    //     rgb(120, 141, 155) 100%
+    //   );
+    //   filter: blur(100px);
+    //   z-index: 1;
+    // }
+  }
+
   &__body {
+    position: relative;
     max-width: 54%;
+    z-index: 20;
   }
 
   &__title {
@@ -39,6 +59,7 @@
     top: 0;
     right: 0;
     z-index: 10;
+    // width: 45%;
   }
 
   &__image {

@@ -10,6 +10,28 @@
   @include visually-hidden;
 }
 
+.gradient {
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255, 247, 193, 0.8),
+      rgb(120, 141, 155) 100%
+    ),
+    linear-gradient(90deg, #f5f5f5, #e6e6e6);
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--6-cols {
+  grid-template-columns: repeat(6, 1fr);
+}
+
 // .hidden-mobile {
 //   @include mobile {
 //     display: none !important;

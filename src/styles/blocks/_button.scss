@@ -13,6 +13,7 @@
   white-space: nowrap; // текст в кнопке не перносится
   border-radius: 32px;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 4px var(--color-darker);
 
   &:focus {
     outline: 2px solid var(--color-dark);
@@ -25,8 +26,19 @@
     text-align: center;
   }
 
-  &.button.button--disabled {
+  &.button--disabled {
     background-color: var(--color-light-gray);
     cursor: not-allowed;
+  }
+
+  &.button--card {
+    font-family: var(--font-family-accent);
+    padding: 5px 20px;
+    background-color: var(--color-darker);
+    color: var(--color-secondary);
+    text-shadow: none;
+    box-shadow: none;
+    margin-left: auto;
+    margin-top: auto;
   }
 }
