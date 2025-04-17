@@ -7,7 +7,11 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: path.resolve(__dirname, 'index.html'), // Используем входной файл HTML
+      input: path.resolve(__dirname, 'index.html'),
+      about: path.resolve(__dirname, 'about.html'),
+      contacts: path.resolve(__dirname, 'contacts.html'),
+      products: path.resolve(__dirname, 'products.html'),
+      products_emulsions: path.resolve(__dirname, 'products-emulsions.html'),
     },
   },
 });

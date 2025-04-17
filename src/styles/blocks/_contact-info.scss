@@ -1,0 +1,86 @@
+@use '../helpers' as *;
+
+.contact-info {
+  overflow: hidden;
+
+  &__header {
+    min-height: 345px;
+    background: url('/src/assets/images/contacts-info/contacts-info-header-bg.jpg')
+      center / cover no-repeat;
+    display: flex;
+    align-items: end;
+  }
+  &__body {
+    padding-block: 150px;
+    background: linear-gradient(
+      to right,
+      var(--color-dark) 35%,
+      var(--color-black) 0%
+    );
+
+    height: 735px;
+
+    display: flex;
+    gap: 65px;
+  }
+
+  &__desc {
+    padding-block: 77px;
+  }
+
+  &__title {
+    font-size: 38px;
+  }
+
+  &__map {
+    position: relative;
+    flex: 1;
+    z-index: 2;
+
+    &::before {
+      content: '';
+
+      @include abs-center;
+
+      left: 45%;
+      width: 100%;
+      height: 120%;
+      border: 10px solid var(--color-primary);
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
+  &__connections {
+    position: relative;
+    // flex: 1;
+    flex-basis: 640px;
+    padding: 48px 95px 72px;
+    background-color: var(--color-darker);
+
+    &::before {
+      content: '';
+
+      @include abs-center;
+
+      top: 45%;
+      left: 55%;
+
+      width: 100%;
+      height: 100%;
+      border: 10px solid var(--color-primary);
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+  }
+
+  &__list {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
+  &__list .communication-list__item:last-child img {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.quality {
+  background-color: var(--color-black);
+  padding-block: 100px;
+
+  &__text {
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+  }
+}

@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.connect-us {
+  padding: 35px 65px;
+  background-color: var(--color-darker);
+  display: flex;
+  gap: 30px;
+
+  &__main {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+  }
+
+  &__map {
+    flex: 1;
+  }
+}

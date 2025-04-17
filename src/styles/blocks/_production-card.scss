@@ -1,0 +1,77 @@
+@use '../helpers' as *;
+
+.production-card {
+  &__img {
+    max-width: 350px;
+  }
+
+  &__main {
+    background-color: rgb(255, 255, 255, 0.7);
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 25px 15px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-family: var(--font-family-accent);
+    font-weight: 500;
+    color: var(--color-darker);
+  }
+
+  &__series {
+    color: var(--color-dark-gray);
+    font-size: 13px;
+    font-family: var(--font-family-accent);
+  }
+
+  &__oils:not(:first-child) {
+    margin-top: 12px;
+  }
+
+  &__link {
+    margin-right: auto;
+    width: 50%;
+  }
+
+  &--swiper {
+    display: grid;
+    // min-width: 350px;
+    height: 490px;
+
+    .production-card__main {
+      flex-direction: column;
+    }
+
+    .production-card__content {
+      flex: 1;
+    }
+
+    .production-card__link {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .production-card__img {
+      width: 100%;
+    }
+  }
+}
+
+.features-list {
+  display: grid;
+  column-gap: 15px;
+  row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__item {
+    font-size: 13px;
+    color: var(--color-dark-gray);
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.communication-list {
+  font-family: var(--font-family-accent);
+  font-size: 29px;
+  font-weight: 500;
+  color: var(--color-secondary);
+
+  display: grid;
+  column-gap: 55px;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &--home {
+    grid-template-columns: 1fr 2fr;
+    padding: 45px 45px;
+    row-gap: 20px;
+  }
+}

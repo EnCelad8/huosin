@@ -1,0 +1,94 @@
+@use '../helpers' as *;
+
+.emulsion-details {
+  max-width: 1275px;
+
+  &__header {
+    padding: 40px 40px;
+    background-color: var(--color-darker);
+  }
+
+  &__title {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  &__body {
+    display: flex;
+    gap: 110px;
+  }
+
+  &__main {
+    position: relative;
+    flex-basis: 563px;
+    padding-top: 40px;
+    padding-right: 55px;
+
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        var(--color-darker) 0%,
+        var(--color-darker) 70%,
+        rgba(237, 236, 230, 0.6) 100%
+      );
+    }
+  }
+
+  &__content {
+    font-family: var(--font-family-accent);
+    color: var(--color-darker);
+    font-weight: 300;
+
+    padding-bottom: 28px;
+  }
+
+  &__content:not(:first-child) {
+    position: relative;
+    padding-top: 28px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        #040000 0%,
+        #040000 70%,
+        rgba(237, 236, 230, 0.6) 100%
+      );
+    }
+  }
+
+  &__name {
+    font-size: 29px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-size: 24px;
+    margin-top: 16px;
+  }
+
+  &__item p {
+    font-size: 24px;
+  }
+
+  &__link {
+    margin-top: auto;
+  }
+}

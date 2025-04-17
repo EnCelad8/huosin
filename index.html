@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Huosin</title>
+    <title>Huosin | Home</title>
     <script src="/src/scripts/main.js" type="module" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div class="header__body container">
-        <div class="header__left">
+    <header class="header header--absolute" data-js-header>
+      <div class="header__body">
+        <div class="header__inner container">
           <a class="header__logo logo" href="/" aria-label="Home" title="Home">
             <img
               src="src/assets/images/logo.png"
@@ -19,24 +19,38 @@
               height="32"
             />
           </a>
-          <nav class="header__menu">
-            <ul class="header__menu-list">
-              <li class="header__menu-item">
-                <a class="header__menu-link is-active" href="/"> Главная </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> Продукция </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> О Компании </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> Контакты </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a class="header__menu-link is-active" href="/"> Главная </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> Продукция </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> О Компании </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> Контакты </a>
+                </li>
+              </ul>
+            </nav>
+            <a href="/" class="header__contact-us-link button"
+              >Заказать звонок</a
+            >
+          </div>
+          <button
+            class="header__burger-button burger-button visible-mobile-only"
+            data-js-header-burger-button
+            type="button"
+            aria-label="Открыть меню"
+          >
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
         </div>
-        <a href="/" class="header__contact-us-link button">Заказать звонок</a>
       </div>
     </header>
     <main>
@@ -115,30 +129,62 @@
             </div>
           </div>
         </section>
-        <section class="production">
-          <div class="production__header">
-            <div class="section-header--bg">
-              <div class="container">
-                <div class="production__desc">
-                  <h2
-                    class="section-header__title section-header__title--yellow"
-                  >
-                    Продукция
-                  </h2>
-                  <p>
-                    Смазочные материалы HUOSIN востребованы в различных отраслях
-                    промышленности: среди производителей проволоки из меди
-                    и цветных металлов, кабелей, электроники и других
-                    металлических изделий.
-                  </p>
-                </div>
+      </div>
+      <section class="production">
+        <div class="production__header section-header">
+          <div class="section-header--bg">
+            <div class="container">
+              <div class="production__desc">
+                <h2 class="section-header__title section-header__title--yellow">
+                  Продукция
+                </h2>
+                <p>
+                  Смазочные материалы HUOSIN востребованы в различных отраслях
+                  промышленности: среди производителей проволоки из меди
+                  и цветных металлов, кабелей, электроники и других
+                  металлических изделий.
+                </p>
               </div>
             </div>
           </div>
-          <div class="production__body">
-            <div class="container">
-              <ul class="production__list">
-                <li class="production__list-item production-card">
+        </div>
+        <div class="production__body">
+          <div class="container">
+            <div class="swiper my-swiper">
+              <div class="swiper-buttons">
+                <div class="swiper-btn swiper-button-prev">
+                  <svg
+                    width="13"
+                    height="22"
+                    viewBox="0 0 13 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.6872 0.113281L12.1172 1.51328L2.80519 10.9933L12.1172 20.4853L10.6872 21.8833L-0.000811577 10.9953L10.6872 0.113281Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="swiper-btn swiper-button-next">
+                  <svg
+                    width="13"
+                    height="22"
+                    viewBox="0 0 13 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.31281 0.113281L0.882812 1.51328L10.1948 10.9933L0.882812 20.4853L2.31281 21.8833L13.0008 10.9953L2.31281 0.113281Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="production__list swiper-wrapper">
+                <div
+                  class="production__list-item production-card production-card--swiper swiper-slide"
+                >
                   <div class="production-card__main">
                     <img
                       class="production-card__img"
@@ -182,24 +228,59 @@
                       >
                     </div>
                   </div>
-                </li>
-                <li class="production__list-item production-card">
+                </div>
+                <div
+                  class="production__list-item production-card production-card--swiper swiper-slide"
+                >
                   <div class="production-card__main">
                     <img
                       class="production-card__img"
-                      src="/src/assets/images/production/production-card-1.jpg"
+                      src="/src/assets/images/production/production-card-2.jpg"
                       alt="Смазочный материал"
                     />
                     <div class="production-card__content">
                       <p class="production-card__name">
-                        СОЖ для волочения и непрерывного отжига медной проволоки
+                        Смазочные материалы для волочения алюминия
                       </p>
                       <ul class="production-card__features features-list">
                         <li class="features-list__item">
-                          <strong>A.</strong>WT-2050
+                          <strong>A.</strong> Масла серии OP-70
                         </li>
                         <li class="features-list__item">
-                          <strong>B.</strong>WT-2050D
+                          <strong>B.</strong>WOP-801
+                        </li>
+                      </ul>
+                      <div class="production-card__series">
+                        <p class="production-card__oils">OP-700</p>
+                        <p class="production-card__oils">OP-702</p>
+                      </div>
+                      <a
+                        href="/"
+                        class="production-card__link button button--card"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="production__list-item production-card production-card--swiper swiper-slide"
+                >
+                  <div class="production-card__main">
+                    <img
+                      class="production-card__img"
+                      src="/src/assets/images/production/production-card-3.jpg"
+                      alt="Смазочный материал"
+                    />
+                    <div class="production-card__content">
+                      <p class="production-card__name">
+                        Антиоксиданты для меди
+                      </p>
+                      <ul class="production-card__features features-list">
+                        <li class="features-list__item">
+                          <strong>A.</strong> FW-300
+                        </li>
+                        <li class="features-list__item">
+                          <strong>B.</strong> FW-500
                         </li>
                       </ul>
                       <a
@@ -209,12 +290,549 @@
                       >
                     </div>
                   </div>
+                </div>
+                <div
+                  class="production__list-item production-card production-card--swiper swiper-slide"
+                >
+                  <div class="production-card__main">
+                    <img
+                      class="production-card__img"
+                      src="/src/assets/images/production/production-card-4.jpg"
+                      alt="Смазочный материал"
+                    />
+                    <div class="production-card__content">
+                      <p class="production-card__name">
+                        Сопутствующие продукты
+                      </p>
+                      <ul class="production-card__features features-list">
+                        <li class="features-list__item">
+                          <strong>A.</strong> XP-10
+                        </li>
+                        <li class="features-list__item">
+                          <strong>B.</strong> QS-10
+                        </li>
+                        <li class="features-list__item">
+                          <strong>B.</strong> RH-03
+                        </li>
+                      </ul>
+                      <a
+                        href="/"
+                        class="production-card__link button button--card"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="production__list-item production-card production-card--swiper swiper-slide"
+                >
+                  <div class="production-card__main">
+                    <img
+                      class="production-card__img"
+                      src="/src/assets/images/production/production-card-5.jpg"
+                      alt="Смазочный материал"
+                    />
+                    <div class="production-card__content">
+                      <p class="production-card__name">Флюсующие добавки</p>
+                      <ul class="production-card__features features-list">
+                        <li class="features-list__item">
+                          <strong>A.</strong> RT-20
+                        </li>
+                        <li class="features-list__item">
+                          <strong>B.</strong> RT-50
+                        </li>
+                        <li class="features-list__item">
+                          <strong>B.</strong> SHT-601
+                        </li>
+                      </ul>
+                      <a
+                        href="/"
+                        class="production-card__link button button--card"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="production__list-item production-card production-card--swiper swiper-slide"
+                >
+                  <div class="production-card__main">
+                    <img
+                      class="production-card__img"
+                      src="/src/assets/images/production/production-card-6.jpg"
+                      alt="Смазочный материал"
+                    />
+                    <div class="production-card__content">
+                      <p class="production-card__name">
+                        Масла для направляющих валов
+                      </p>
+                      <ul class="production-card__features features-list">
+                        <li class="features-list__item">
+                          <strong>A.</strong> SI–30
+                        </li>
+                        <li class="features-list__item">
+                          <strong>B.</strong> SI–50
+                        </li>
+                        <li class="features-list__item">
+                          <strong>B.</strong> SI–60
+                        </li>
+                      </ul>
+                      <a
+                        href="/"
+                        class="production-card__link button button--card"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <h2 class="advantages__title">Наши приемущества</h2>
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="advantages__header">
+          <ul class="advantages__list container">
+            <li class="advantages__item">
+              <img
+                class="advantages__item-img"
+                src="./src/assets/images/advantages/shield-icon.svg"
+                alt="Щит"
+              />
+
+              <p class="advantages__item-text">
+                Гарантия качества и надёжности
+              </p>
+            </li>
+            <li class="advantages__item">
+              <img
+                class="advantages__item-img"
+                src="./src/assets/images/advantages/coin-icon.svg"
+                alt="Монетка"
+              />
+              <p class="advantages__item-text">Доступная цена</p>
+            </li>
+            <li class="advantages__item">
+              <img
+                class="advantages__item-img"
+                src="./src/assets/images/advantages/hand-icon.svg"
+                alt="Руки"
+              />
+              <p class="advantages__item-text">
+                Индивидуальный подход к каждому клиенту
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="advantages__body">
+          <div class="container">
+            <h3 class="advantages__subtitle">
+              Надёжный поставщик смазочных материалов
+            </h3>
+            <div class="advantages__main benefits">
+              <ul class="benefits__list">
+                <li class="benefits__item">
+                  <div class="benefits__left">
+                    <p class="benefits__number">01</p>
+                    <p class="benefits__title">Широкий ассортимент</p>
+                  </div>
+                  <p class="benefits__text">
+                    Смазочные материалы HUOSIN, соответствующие международным
+                    стандартам.
+                  </p>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__left">
+                    <p class="benefits__number">02</p>
+                    <p class="benefits__title">Доступная цена</p>
+                  </div>
+                  <p class="benefits__text">
+                    Прямое сотрудничество с производителем обеспечивает выгодные
+                    условия.
+                  </p>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__left">
+                    <p class="benefits__number">03</p>
+                    <p class="benefits__title">Гарантия качества</p>
+                  </div>
+                  <p class="benefits__text">
+                    Продукт проходит строгий контроль, что обеспечивает
+                    его надёжность.
+                  </p>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__left">
+                    <p class="benefits__number">04</p>
+                    <p class="benefits__title">Профессиональная помощь</p>
+                  </div>
+                  <p class="benefits__text">
+                    Эксперты помогут выбрать подходящий продукт и ответят
+                    на все вопросы
+                  </p>
                 </li>
               </ul>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+        <div class="advantages__bottom-img" role="img"></div>
+      </section>
+      <section class="testimonials">
+        <div class="testimonials__header section-header">
+          <div class="section-header--bg">
+            <div class="container">
+              <h2
+                class="testimonials__title section-header__title section-header__title--yellow"
+              >
+                О нас говорят
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__body">
+          <div class="testimonials__main container">
+            <div class="swiper second-swiper">
+              <div class="swiper-buttons">
+                <div class="swiper-btn swiper-button-prev">
+                  <svg
+                    width="13"
+                    height="22"
+                    viewBox="0 0 13 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.6872 0.113281L12.1172 1.51328L2.80519 10.9933L12.1172 20.4853L10.6872 21.8833L-0.000811577 10.9953L10.6872 0.113281Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="swiper-btn swiper-button-next">
+                  <svg
+                    width="13"
+                    height="22"
+                    viewBox="0 0 13 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.31281 0.113281L0.882812 1.51328L10.1948 10.9933L0.882812 20.4853L2.31281 21.8833L13.0008 10.9953L2.31281 0.113281Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="testimonials__list swiper-wrapper">
+                <div class="testimonials__item review swiper-slide">
+                  <img
+                    class="review__img"
+                    src="./src/assets/images/testimonials/testimonials-review-1.jpg"
+                    alt="Изображение отзыва"
+                    width="348"
+                  />
+                  <div class="review__right-box">
+                    <h3 class="review__company">Компания: «ЛУБТЕХ»</h3>
+                    <p class="review__product">Продукт: СОЖ WT-2052 (360 л)</p>
+                    <p class="review__manufacturer">Производитель: HUOSIN</p>
+                    <blockquote class="review__quote">
+                      «СОЖ использовалась 9 месяцев на линии волочения меди
+                      (станок ВСК-13, диаметр проволоки 1,3–2,8 мм). Продукт
+                      продемонстрировал высокую эффективность, не требуя
+                      дополнительных затрат на пеногасители».
+                    </blockquote>
+                    <h4 class="review__advantages-title">Преимущества:</h4>
+                    <ul class="review__advantages-list">
+                      <li class="review__advantages-item">
+                        <p>— Не пенится, не оставляет липкого слоя;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Исключена обрывность проволоки;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Длительный срок службы эмульсии.</p>
+                      </li>
+                    </ul>
+                    <p class="review__recommendation">
+                      Рекомендуем продукт для аналогичных задач.<br />
+                      — А.С. Федулов, главный технолог
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonials__item review swiper-slide">
+                  <img
+                    class="review__img"
+                    src="./src/assets/images/testimonials/testimonials-review-2.jpg"
+                    alt="Изображение отзыва"
+                    width="348"
+                    height="478"
+                  />
+                  <div class="review__right-box">
+                    <h3 class="review__company">Компания: «ЛУБТЕХ»</h3>
+                    <p class="review__product">Продукт: СОЖ WT-2050D</p>
+                    <p class="review__manufacturer">Производитель: HUOSIN</p>
+                    <blockquote class="review__quote">
+                      «СОЖ использовалась 3 месяца на волочильной машине
+                      ММН-121. Работала стабильно, без обрывов и пены.»
+                    </blockquote>
+                    <h4 class="review__advantages-title">Преимущества:</h4>
+                    <ul class="review__advantages-list">
+                      <li class="review__advantages-item">
+                        <p>— Не пенилась даже при длительной эксплуатации;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Отсутствует налипание шлама на кабестанах;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>
+                          — Сохраняет необходимые параметры жирности и pH в
+                          течение всего периода использования;
+                        </p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>
+                          — Длительный срок службы эмульсии при интенсивной
+                          нагрузке.
+                        </p>
+                      </li>
+                    </ul>
+                    <p class="review__recommendation">
+                      Рекомендуем для аналогичных задач. — Байбакова Н.И.,
+                      инженер-технолог
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonials__item review swiper-slide">
+                  <img
+                    class="review__img"
+                    src="./src/assets/images/testimonials/testimonials-review-3.jpg"
+                    alt="Изображение отзыва"
+                    width="348"
+                    height="478"
+                  />
+                  <div class="review__right-box">
+                    <h3 class="review__company">Компания: «ЛУБТЕХ»</h3>
+                    <p class="review__product">
+                      Продукт: Волочильное масло WT-2053
+                    </p>
+                    <p class="review__manufacturer">Производитель: HUOSIN</p>
+                    <blockquote class="review__quote">
+                      «Масло опробовано в течение 3 месяцев на машинах
+                      тончайшего волочения AG-24D и SPS100/24 для никелевой
+                      проволоки (диаметр 0,10–0,035 мм). Продемонстрировало
+                      стабильную работу без обрывов и пены при концентрации жира
+                      4%.»
+                    </blockquote>
+                    <h4 class="review__advantages-title">Преимущества:</h4>
+                    <ul class="review__advantages-list">
+                      <li class="review__advantages-item">
+                        <p>— Прозрачная эмульсия без резкого запаха;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Не вызывает раздражения кожи;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Стабильная концентрация жира;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Отсутствие пены и обрывов.</p>
+                      </li>
+                    </ul>
+                    <p class="review__recommendation">
+                      Рекомендуем продукт для аналогичных задач.<br />
+                      — Г.А. Мелехина, инженер-технолог
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonials__item review swiper-slide">
+                  <img
+                    class="review__img"
+                    src="./src/assets/images/testimonials/testimonials-review-4.jpg"
+                    alt="Изображение отзыва"
+                    width="348"
+                    height="478"
+                  />
+                  <div class="review__right-box">
+                    <h3 class="review__company">Компания: «ЛУБТЕХ»</h3>
+                    <p class="review__product">
+                      Продукт: Волочильная эмульсия WT-2052
+                    </p>
+                    <p class="review__manufacturer">Производитель: HUOSIN</p>
+                    <blockquote class="review__quote">
+                      «Эмульсия использовалась 7 месяцев на линии тонкого
+                      волочения меди (станок MS-200 №1, диаметр проволоки
+                      0,18–0,32 мм). Продукт показал высокую эффективность, не
+                      требуя дополнительных затрат на пеногасители.»
+                    </blockquote>
+                    <h4 class="review__advantages-title">Преимущества:</h4>
+                    <ul class="review__advantages-list">
+                      <li class="review__advantages-item">
+                        <p>— Не пенится;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Не оставляет липкого слоя;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Исключена обрывность проволоки;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Отличная смазочно-охлаждающая способность;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Защита от микроорганизмов;</p>
+                      </li>
+                      <li class="review__advantages-item">
+                        <p>— Длительный срок службы.</p>
+                      </li>
+                    </ul>
+                    <p class="review__recommendation">
+                      Рекомендуем продукт для аналогичных задач.<br />
+                      — А.Р. Тумановский, главный технолог ОГТ
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact__header section-header section-header--bg">
+          <div class="container">
+            <h2 class="contact__title section-header__title">Форма связи</h2>
+          </div>
+        </div>
+        <div class="contact__body container connect-us">
+          <div class="connect-us__main">
+            <form class="connect-us__form" action="/">
+              <h3 class="connect-us__title">
+                Сотрудники компании помогут найти оптимальное решение ваших
+                задач
+              </h3>
+              <label class="visually-hidden" for="phone">Телефон</label>
+              <input
+                class="connect-us__input input"
+                id="phone"
+                type="tel"
+                placeholder="Телефон"
+                pattern="[\+]?[0-9\s\(\)-]+"
+                required
+              />
+              <label class="visually-hidden" for="email">Почта</label>
+              <input
+                class="connect-us__input input"
+                id="email "
+                type="email"
+                placeholder="Email"
+                required
+              />
+              <label class="visually-hidden" for="name">Имя</label>
+              <input
+                class="connect-us__input input"
+                id="name "
+                type="text"
+                placeholder="Имя"
+                required
+              />
+              <button class="connect-us__button button" type="submit">
+                Получить консультацию
+              </button>
+            </form>
+          </div>
+          <div class="connect-us__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A19e0e06062be50dade979f5034abdc71b50625d63fec9808acca4be8292cfc6c&amp;source=constructor"
+              width="100%"
+              height="100%"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+        <div class="contact__bottom">
+          <ul class="contact__list communication-list communication-list--home">
+            <li class="communication-list__item">
+              <img
+                src="./src/assets/images/contact/icons/icon-phone.svg"
+                alt="Телефон"
+              />
+              <span class="communication-list__text">+7 812 292-00-75</span>
+            </li>
+            <li class="communication-list__item">
+              <img
+                src="./src/assets/images/contact/icons/icon-time.svg"
+                alt="Время работы"
+              />
+              <span class="communication-list__text">
+                <time datetime="09:00-17:30">Пн-Пт 9:00–17:30</time>
+              </span>
+            </li>
+            <li class="communication-list__item">
+              <img
+                src="./src/assets/images/contact/icons/icon-email.svg"
+                alt="Электронная почта"
+              />
+              <span class="communication-list__text">sales@huosin.ru</span>
+            </li>
+            <li class="communication-list__item">
+              <img
+                src="./src/assets/images/contact/icons/icon-location.svg"
+                alt="Адрес"
+              />
+              <address class="communication-list__text">
+                196603, Россия, г. Санкт-Петербург, г. Пушкин, ул. Гусарская, д.
+                4Ц
+              </address>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__body">
+        <div class="footer__main container">
+          <a class="footer__logo" href="/">
+            <img
+              src="./src/assets/images/footer/footer-logo.png"
+              alt="Huosin Logo"
+              width="140"
+              height="32"
+            />
+          </a>
+          <nav class="footer__menu">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="/">Главная</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="/">Продукция</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="/">О Компании</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="/">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="footer__second-logo" href="/">
+            <img
+              src="./src/assets/images/footer/lubtech-logo.png"
+              alt="Лубтех логотип"
+              width="158"
+              height="28"
+            />
+          </a>
+        </div>
+        <div class="container">
+          <p class="footer__desc">
+            Смазочные материалы высокого качества для волочения медной
+            и алюминиевой проволоки
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

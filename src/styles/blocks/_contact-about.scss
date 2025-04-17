@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+.contact-about {
+  padding-block: 100px;
+
+  background: url('/src/assets/images/contact-about/contact-about-bg.jpg')
+    center / cover no-repeat;
+}

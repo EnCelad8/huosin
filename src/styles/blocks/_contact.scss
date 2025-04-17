@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.contact {
+  position: relative;
+
+  padding-top: 55px;
+  min-height: 1083px;
+  background: url('/src/assets/images/contact/contact-bg-image.jpg') center /
+    cover no-repeat;
+
+  &__title {
+    padding-block: 70px;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    margin-top: 55px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: end;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 75px;
+    right: 0;
+    width: 1085px;
+    height: 405px;
+    background: rgba(57, 55, 54, 0.7);
+  }
+}

@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.our-choice {
+  background: url('/src/assets/images/our-choice/our-choice-bg.jpg') center /
+    cover no-repeat;
+
+  &__title {
+    font-size: 80px;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    padding-block: 100px;
+  }
+}

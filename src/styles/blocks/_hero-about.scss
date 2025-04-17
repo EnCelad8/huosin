@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.hero-about {
+  min-height: 618px;
+  background: url('/src/assets/images/about-company/about-company-bg.jpg')
+    center / cover no-repeat;
+  display: flex;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 80px;
+    padding-block: 76px;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-shadow: -2px 2px 2px rgba(109, 109, 108, 0.68);
+  }
+
+  &__yellow-text {
+    color: var(--color-primary);
+  }
+
+  &__desc {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-light-gray);
+    text-shadow: -2px 2px 2px rgba(109, 109, 108, 0.68);
+  }
+
+  &__separate-img {
+    background: url('/src/assets/images/about-company/separate-img.jpg')
+      center / cover no-repeat;
+    width: 100%;
+    height: 120px;
+  }
+}

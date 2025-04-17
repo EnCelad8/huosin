@@ -8,12 +8,13 @@
   padding: 8px 20px;
   color: var(--color-darker);
   font-weight: 500;
+  font-size: 16px;
   text-transform: uppercase;
   background-color: var(--color-primary);
   white-space: nowrap; // текст в кнопке не перносится
   border-radius: 32px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 4px var(--color-darker);
+  box-shadow: 0 0 5px rgba(109, 109, 108, 0.4);
 
   &:focus {
     outline: 2px solid var(--color-dark);
@@ -38,7 +39,6 @@
     color: var(--color-secondary);
     text-shadow: none;
     box-shadow: none;
-    margin-left: auto;
     margin-top: auto;
   }
 }

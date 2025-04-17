@@ -1,0 +1,46 @@
+@use '../helpers' as *;
+
+.emulsion {
+  &__item {
+    margin-top: 20px;
+    background-color: var(--color-secondary);
+    padding-right: 50px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+
+    --circleSize: #{50px};
+
+    position: relative;
+    padding-left: 30px;
+    padding-right: 80px;
+    flex: 1;
+
+    ::after {
+      @include square(var(--circleSize));
+
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 50%;
+      translate: 0 -50%;
+
+      background: url('/src/assets/images/emulsion/icons/emulsion-arrow.svg')
+        center no-repeat var(--color-darker);
+      border-radius: 50%;
+    }
+  }
+
+  &__name {
+    font-family: var(--font-family-accent);
+    font-size: 29px;
+    font-weight: 500;
+    color: var(--color-darker);
+  }
+}

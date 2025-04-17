@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.footer {
+  font-size: 13px;
+  font-family: var(--font-family-accent);
+  color: var(--color-off-white);
+  min-height: 248px;
+  padding-top: 45px;
+  padding-bottom: 33px;
+  background-color: var(--color-black);
+
+  &__body {
+    border-bottom: 1px solid var(--color-off-white);
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 64px;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__desc {
+    max-width: 190px;
+    font-weight: 300;
+    margin-block: 28px;
+  }
+}

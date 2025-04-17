@@ -1,9 +1,10 @@
 @use '../helpers' as *;
 
 .about {
-  //   background-color: var(--color-background);
+  // background-color: var(--color-background);
   position: relative;
   padding-top: 250px;
+  padding-bottom: 75px;
 
   &__top {
     position: relative;

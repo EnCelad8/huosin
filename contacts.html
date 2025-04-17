@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huosin | Contacts</title>
+    <script src="/src/scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header header--white header--absolute">
+      <div class="header__body container">
+        <div class="header__left">
+          <a class="header__logo logo" href="/" aria-label="Home" title="Home">
+            <img
+              src="src/assets/images/logo.png"
+              alt="Huosin Logo"
+              width="140"
+              height="32"
+            />
+          </a>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/"> Главная </a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/"> Продукция </a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link is-active" href="/"> О Компании </a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/"> Контакты </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <a href="/" class="header__contact-us-link button">Заказать звонок</a>
+      </div>
+    </header>
+    <main>
+      <section class="hero-contacts">
+        <div class="hero-contacts__wrapper">
+          <img
+            class="hero-contacts__image"
+            src="/src/assets/images/hero-contacts/hero-contacts-bg.png"
+          />
+        </div>
+
+        <div class="hero-contacts__header">
+          <h1 class="hero-contacts__title container">Контакты</h1>
+        </div>
+        <div class="hero-contacts__body">
+          <div class="hero-contacts__main container">
+            <h2 class="hero-contacts__subtitle">
+              Задайте нам вопрос или оставьте заявку — мы ответим в кратчайшие
+              сроки!»
+            </h2>
+            <form class="hero-contacts__form" action="/">
+              <h3 class="hero-contacts__text">
+                Мы предложим надежное решение ваших задач.
+              </h3>
+              <label class="visually-hidden" for="phone">Телефон</label>
+              <input
+                class="hero-contacts__input input"
+                id="phone"
+                type="tel"
+                placeholder="Телефон"
+                pattern="[\+]?[0-9\s\(\)-]+"
+                required
+              />
+              <label class="visually-hidden" for="email">Почта</label>
+              <input
+                class="hero-contacts__input input"
+                id="email "
+                type="email"
+                placeholder="Email"
+                required
+              />
+              <label class="visually-hidden" for="name">Имя</label>
+              <input
+                class="hero-contacts__input input"
+                id="name "
+                type="text"
+                placeholder="Имя"
+                required
+              />
+              <button class="hero-contacts__button button" type="submit">
+                Получить консультацию
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="quality">
+        <h2 class="visually-hidden">Качество</h2>
+        <p class="quality__text container">
+          Наши продукты признаны и рекомендованы ведущими производителями
+          оборудования, такими как NIEHOFF, SAMP, SICTRA, HONTA и YONGXIONG.
+        </p>
+      </section>
+      <section class="contact-info">
+        <div class="contact-info__header section-header">
+          <div class="section-header--bg">
+            <div class="contact-info__desc container">
+              <h2
+                class="contact-info__title section-header__title section-header__title--yellow"
+              >
+                Мы на связи с понедельника по пятницу.
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="contact-info__body">
+          <div class="contact-info__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A19e0e06062be50dade979f5034abdc71b50625d63fec9808acca4be8292cfc6c&amp;source=constructor"
+              width="100%"
+              height="100%"
+              frameborder="0"
+            ></iframe>
+          </div>
+          <div class="contact-info__connections">
+            <ul class="contact-info__list communication-list">
+              <li class="communication-list__item">
+                <img
+                  src="./src/assets/images/contact/icons/icon-phone.svg"
+                  alt="Телефон"
+                />
+                <span class="communication-list__text">+7 812 292-00-75</span>
+              </li>
+              <li class="communication-list__item">
+                <img
+                  src="./src/assets/images/contact/icons/icon-time.svg"
+                  alt="Время работы"
+                />
+                <span class="communication-list__text">
+                  <time datetime="09:00-17:30">Пн-Пт 9:00–17:30</time>
+                </span>
+              </li>
+              <li class="communication-list__item">
+                <img
+                  src="./src/assets/images/contact/icons/icon-email.svg"
+                  alt="Электронная почта"
+                />
+                <span class="communication-list__text">sales@huosin.ru</span>
+              </li>
+              <li class="communication-list__item">
+                <img
+                  src="./src/assets/images/contact/icons/icon-location.svg"
+                  alt="Адрес"
+                />
+                <address class="communication-list__text">
+                  196603, Россия, г. Санкт-Петербург, г. Пушкин, ул. Гусарская,
+                  д. 4Ц
+                </address>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__body">
+        <div class="footer__main container">
+          <a class="footer__logo" href="/">
+            <img
+              src="./src/assets/images/footer/footer-logo.png"
+              alt="Huosin Logo"
+              width="140"
+              height="32"
+            />
+          </a>
+          <nav class="footer__menu">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="/">Главная</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="/">Продукция</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="./about.html">О Компании</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="/">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="footer__second-logo" href="/">
+            <img
+              src="./src/assets/images/footer/lubtech-logo.png"
+              alt="Лубтех логотип"
+              width="158"
+              height="28"
+            />
+          </a>
+        </div>
+        <div class="container">
+          <p class="footer__desc">
+            Смазочные материалы высокого качества для волочения медной
+            и алюминиевой проволоки
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

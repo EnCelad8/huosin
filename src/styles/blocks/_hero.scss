@@ -26,7 +26,6 @@
   &__body {
     position: relative;
     max-width: 54%;
-    z-index: 20;
   }
 
   &__title {
@@ -58,7 +57,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 10;
+
     // width: 45%;
   }
 

@@ -1,0 +1,70 @@
+@use '../helpers' as *;
+
+.hero-contacts {
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    // filter: blur(8px);
+  }
+
+  &__header {
+    padding-top: 200px;
+    padding-bottom: 65px;
+    background-color: var(--color-gray);
+  }
+
+  &__title {
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-shadow: -2px 2px 2px rgba(109, 109, 108, 0.68);
+    z-index: 2;
+  }
+
+  &__body {
+    background-color: rgb(4, 0, 0, 0.7);
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  &__subtitle {
+    position: relative;
+
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-shadow: -2px 2px 2px rgba(109, 109, 108, 0.68);
+    z-index: 2;
+  }
+
+  &__form {
+    position: relative;
+    margin-top: 40px;
+    padding: 48px 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    background-color: rgb(44, 42, 41, 0.8);
+    z-index: 2;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-off-white);
+    text-transform: uppercase;
+    text-shadow: -1px 1px 1px rgba(109, 109, 108, 0.46);
+  }
+
+  &__button {
+    padding: 12px 20px;
+  }
+}

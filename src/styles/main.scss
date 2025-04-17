@@ -7,9 +7,30 @@
 @use './blocks/header';
 @use './blocks/button';
 @use './blocks/logo';
-
 @use './blocks/hero';
 @use './blocks/about';
-
 @use './blocks/section-header';
-@use './blocks/_production.scss';
+@use './blocks/production.scss';
+@use './blocks/advantages';
+@use './blocks/testimonials';
+@use './blocks/contact';
+@use './blocks/connect-us';
+@use './blocks/footer';
+@use './blocks/hero-about';
+@use './blocks/brand';
+@use './blocks/assortment';
+@use './blocks/why-us';
+@use './blocks/our-choice';
+@use './blocks/contact-about';
+@use './blocks/hero-contacts';
+@use './blocks/quality';
+@use './blocks/contact-info';
+@use './blocks/communication-list';
+@use './blocks/production-card';
+@use './blocks/categories';
+@use './blocks/emulsion';
+@use './blocks/emulsion-details';
+@use './blocks/breadcrumbs';
+@use './blocks/burger-button';
+
+@use './swiper/swiper';
