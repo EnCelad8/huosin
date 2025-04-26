@@ -2,12 +2,24 @@
 
 .categories {
   &__wrapper {
-    background: url('/src/assets/images/ categories/categories-bg.jpg') cover
-      no-repeat;
+    background: url('/src/assets/images/ categories/categories-bg.jpg') center /
+      cover no-repeat;
+  }
+
+  &__body {
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__list {
     margin-top: 40px;
+
+    @include mobile {
+      // display: flex;
+      // justify-content: center;
+    }
   }
 
   &__list {

@@ -7,17 +7,37 @@
   color: var(--color-secondary);
 
   display: grid;
-  column-gap: 55px;
+  column-gap: 40px;
 
   &__item {
+    --iconSize: 30px;
+
     display: inline-flex;
     align-items: center;
     gap: 15px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+    & img {
+      @include mobile {
+        --iconSize: 20px;
+        @include square(var(--iconSize));
+      }
+    }
   }
 
   &--home {
     grid-template-columns: 1fr 2fr;
-    padding: 45px 45px;
+    padding: 45px 70px;
     row-gap: 20px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    @include mobile-s {
+      font-size: 16px;
+    }
   }
 }

@@ -1,21 +1,42 @@
 @use '../helpers' as *;
 
 .emulsion {
+  padding-top: 76px;
+  padding-bottom: 120px;
   &__item {
-    margin-top: 20px;
     background-color: var(--color-secondary);
-    padding-right: 50px;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__item:not(:first-child) {
+    margin-top: 60px;
   }
 
   &__link {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 30px;
+      width: 80%;
+    }
+  }
+
+  &__img {
+    // @include tablet {
+    //   width: 50%;
+    // }
   }
 
   &__main {
     display: flex;
     align-items: center;
 
-    --circleSize: #{50px};
+    --circleSize: 50px;
 
     position: relative;
     padding-left: 30px;
@@ -35,6 +56,15 @@
         center no-repeat var(--color-darker);
       border-radius: 50%;
     }
+
+    @include mobile {
+      --circleSize: 38px;
+      padding-left: 0px;
+    }
+
+    @include mobile-s {
+      --circleSize: 32px;
+    }
   }
 
   &__name {
@@ -42,5 +72,13 @@
     font-size: 29px;
     font-weight: 500;
     color: var(--color-darker);
+
+    @include mobile {
+      font-size: 22px;
+    }
+
+    @include mobile-s {
+      font-size: 19px;
+    }
   }
 }

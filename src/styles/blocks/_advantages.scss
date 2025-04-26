@@ -26,40 +26,18 @@
         rgba(237, 236, 230, 0.6) 100%
       );
     }
-  }
-
-  &__header {
-    background-color: var(--color-primary);
-    padding-block: 76px;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    border-left: 5px solid var(--color-secondary);
-
-    &-img {
-      padding-inline: 20px;
+    @include tablet {
+      font-size: 35px;
+    }
+    @include mobile {
+      font-size: 30px;
+      padding-block: 54px;
+      border-right: 80px solid var(--color-black);
     }
 
-    &-text {
-      font-family: var(--font-family-accent);
-      font-size: 20px;
-      text-transform: uppercase;
-      color: var(--color-dark);
+    @include mobile-s {
+      padding-block: 34px;
     }
-  }
-
-  &__body {
-    min-height: 1050px;
-    background: url('/src/assets/images/advantages/advantages-body-bg.jpg')
-      center / cover no-repeat;
   }
 
   &__subtitle {
@@ -80,16 +58,119 @@
       height: 100%;
       width: 20%;
     }
+
+    @include tablet {
+      font-size: 30px;
+      // padding-left: 10px;
+
+      // &::before {
+      //   content: none;
+      // }
+    }
+
+    @include mobile {
+      font-size: 25px;
+    }
+
+    @include mobile-s {
+      font-size: 18px;
+    }
+  }
+
+  &__header {
+    background-color: var(--color-primary);
+    padding-block: 76px;
+
+    @include mobile {
+      padding-block: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border-left: 5px solid var(--color-secondary);
+
+    @media (max-width: 1270px) {
+      gap: 20px;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @include mobile {
+      border: none;
+
+      &:nth-child(2) {
+        order: -1;
+      }
+    }
+
+    &-img {
+      padding-inline: 20px;
+
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    &-text {
+      font-family: var(--font-family-accent);
+      font-size: 20px;
+      text-transform: uppercase;
+      color: var(--color-dark);
+
+      @media (max-width: 930px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__body {
+    min-height: 1050px;
+    background: url('/src/assets/images/advantages/advantages-body-bg.jpg')
+      center / cover no-repeat;
+
+    @include tablet {
+      min-height: 900px;
+    }
   }
 
   &__main {
     padding-top: 50px;
+    padding-bottom: 20px;
+
+    @include mobile {
+      padding-top: 25px;
+    }
+
+    @include mobile-s {
+      padding-top: 15px;
+    }
   }
 
   &__bottom-img {
     background: url('/src/assets/images/advantages/bottom-image.jpg') center /
       cover no-repeat;
-    height: 550px;
+    min-height: 550px;
+
+    @include tablet {
+      min-height: 300px;
+    }
+
+    @include mobile {
+      min-height: 200px;
+    }
   }
 }
 
@@ -125,6 +206,18 @@
     &:not(:last-child) {
       border-bottom: 2px solid #424242;
     }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+    }
+
+    @include mobile-s {
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
+    }
   }
 
   &__left {
@@ -132,12 +225,20 @@
     align-items: center;
     gap: 60px;
     flex: 1;
+
+    @include tablet {
+      gap: 30px;
+    }
   }
 
   &__number {
     font-size: 80px;
     font-weight: 600;
     color: var(--color-black);
+
+    @include tablet {
+      font-size: 60px;
+    }
   }
 
   &__title {
@@ -146,6 +247,10 @@
     font-family: var(--font-family-accent);
     text-transform: uppercase;
     color: var(--color-darker);
+
+    @include tablet {
+      font-size: 20px;
+    }
   }
 
   &__text {
@@ -154,5 +259,9 @@
     font-family: var(--font-family-accent);
     color: var(--color-dark);
     flex: 1;
+
+    @include tablet {
+      font-size: 18px;
+    }
   }
 }

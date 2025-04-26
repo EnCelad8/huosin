@@ -1,14 +1,17 @@
 import Swiper from 'swiper/bundle';
-// import 'swiper/css/bundle';
+import 'swiper/css/bundle';
 
-function initSwiper(selector, config = {}) {
+const prevBtn = document.querySelector('.my-prev-btn');
+const nextBtn = document.querySelector('.my-next-btn');
+
+export function initSwiper(selector, config = {}) {
   document.addEventListener('DOMContentLoaded', function () {
     new Swiper(selector, {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 30,
       navigation: {
-        nextEl: `.swiper-button-next`,
-        prevEl: `.swiper-button-prev`,
+        nextEl: `.my-next-btn`,
+        prevEl: `.my-prev-btn`,
       },
       on: {
         init: function () {
@@ -24,9 +27,6 @@ function initSwiper(selector, config = {}) {
 }
 
 function updateButtons(swiper) {
-  const prevBtn = document.querySelector('.swiper-button-prev');
-  const nextBtn = document.querySelector('.swiper-button-next');
-
   if (swiper.isBeginning) {
     prevBtn.classList.add('swiper-button-disabled');
   } else {
@@ -40,12 +40,28 @@ function updateButtons(swiper) {
   }
 }
 
-initSwiper('.my-swiper');
 initSwiper('.second-swiper', {
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 20,
   pagination: {
     el: '.second-swiper .swiper-pagination',
     clickable: true,
+  },
+});
+
+initSwiper('.my-swiper', {
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1160: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
   },
 });

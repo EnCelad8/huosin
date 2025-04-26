@@ -6,6 +6,18 @@
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include tablet {
+      font-size: 40px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+    }
+
+    @include mobile-s {
+      font-size: 25px;
+    }
   }
 
   &__title--yellow {
@@ -14,7 +26,6 @@
 
   &--bg {
     background-color: rgb(44, 42, 41, 0.8);
-
     width: 100%;
   }
 }

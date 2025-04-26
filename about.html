@@ -8,9 +8,9 @@
     <script src="/src/scripts/main.js" type="module" defer></script>
   </head>
   <body>
-    <header class="header header--white header--absolute">
-      <div class="header__body container">
-        <div class="header__left">
+    <header class="header header--absolute header--white" data-js-header>
+      <div class="header__body">
+        <div class="header__inner container">
           <a class="header__logo logo" href="/" aria-label="Home" title="Home">
             <img
               src="src/assets/images/logo.png"
@@ -19,24 +19,38 @@
               height="32"
             />
           </a>
-          <nav class="header__menu">
-            <ul class="header__menu-list">
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> Главная </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> Продукция </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link is-active" href="/"> О Компании </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> Контакты </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a class="header__menu-link is-active" href="/"> Главная </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> Продукция </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> О Компании </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> Контакты </a>
+                </li>
+              </ul>
+            </nav>
+            <a href="/" class="header__contact-us-link button"
+              >Заказать звонок</a
+            >
+          </div>
+          <button
+            class="header__burger-button burger-button visible-mobile-only"
+            data-js-header-burger-button
+            type="button"
+            aria-label="Открыть меню"
+          >
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
         </div>
-        <a href="/" class="header__contact-us-link button">Заказать звонок</a>
       </div>
     </header>
     <main>
@@ -70,13 +84,13 @@
               продукты бренда эталоном в сфере металлообработки.
             </p>
           </div>
-          <div class="brand__image-wrapper">
-            <img
-              class="brand__image"
-              src="/src/assets/images/brand/brand-image.jpg"
-              alt="Человек с микроскопом"
-            />
-          </div>
+          <!-- <div class="brand__image-wrapper"> -->
+          <img
+            class="brand__image"
+            src="/src/assets/images/brand/brand-image.jpg"
+            alt="Человек с микроскопом"
+          />
+          <!-- </div> -->
         </div>
       </section>
       <section class="assortment">
@@ -190,13 +204,13 @@
                 всегда на шаг впереди.
               </p>
             </div>
-            <div class="why-us__image-wrapper">
-              <img
-                class="why-us__image"
-                src="/src/assets/images/why-us/why-us-img-1.jpg"
-                alt="Рукопожатие"
-              />
-            </div>
+            <!-- <div class="why-us__image-wrapper"> -->
+            <img
+              class="why-us__image"
+              src="/src/assets/images/why-us/why-us-img-1.jpg"
+              alt="Рукопожатие"
+            />
+            <!-- </div> -->
           </div>
         </div>
       </section>
@@ -276,7 +290,7 @@
                 <a class="footer__link" href="/">Продукция</a>
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="./about.html">О Компании</a>
+                <a class="footer__link" href="/">О Компании</a>
               </li>
               <li class="footer__item">
                 <a class="footer__link" href="/">Контакты</a>
@@ -292,7 +306,7 @@
             />
           </a>
         </div>
-        <div class="container">
+        <div class="footer__bottom container">
           <p class="footer__desc">
             Смазочные материалы высокого качества для волочения медной
             и алюминиевой проволоки

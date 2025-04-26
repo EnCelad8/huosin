@@ -7,6 +7,15 @@
       center / cover no-repeat;
     display: flex;
     align-items: end;
+
+    @include tablet {
+      min-height: 400px;
+      gap: 15px;
+    }
+
+    @include mobile-s {
+      min-height: 300px;
+    }
   }
 
   &__desc {
@@ -16,11 +25,29 @@
 
     padding-block: 50px;
 
+    @include tablet {
+      gap: 20px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
     p {
       color: var(--color-off-white);
       font-size: 20px;
       font-family: var(--font-family-accent);
-      flex: 575px 0;
+      flex: 0 1 575px;
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        flex-basis: auto;
+        text-align: center;
+        font-size: 14px;
+      }
     }
   }
 
@@ -29,12 +56,16 @@
     min-height: 965px;
     background: url('/src/assets/images/production/production-body-bg.jpg')
       center / cover no-repeat;
+
+    @include mobile {
+      min-height: 900px;
+    }
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(350px, 1fr));
-    column-gap: 30px;
+    // display: grid;
+    // grid-template-columns: repeat(6, minmax(350px, 1fr));
+    // column-gap: 30px;
     margin-top: 60px;
   }
 }

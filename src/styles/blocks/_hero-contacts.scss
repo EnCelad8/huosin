@@ -1,23 +1,32 @@
 @use '../helpers' as *;
 
 .hero-contacts {
-  &__wrapper {
-    margin: 0 auto;
-    max-width: 1440px;
-    position: relative;
-  }
+  position: relative;
+  z-index: 5;
+  background: url('/src/assets/images/hero-contacts/hero-contacts-bg.png')
+    center / cover no-repeat;
+  // &__wrapper {
+  //   margin: 0 auto;
+  //   max-width: 1440px;
+  //   position: relative;
+  // }
 
-  &__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    // filter: blur(8px);
-  }
+  // &__image {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   // filter: blur(8px);
+  // }
 
   &__header {
     padding-top: 200px;
     padding-bottom: 65px;
     background-color: var(--color-gray);
+
+    @include mobile {
+      padding-top: 160px;
+      padding-bottom: 45px;
+    }
   }
 
   &__title {
@@ -27,12 +36,20 @@
     color: var(--color-secondary);
     text-shadow: -2px 2px 2px rgba(109, 109, 108, 0.68);
     z-index: 2;
+
+    @include mobile {
+      font-size: 40px;
+    }
   }
 
   &__body {
     background-color: rgb(4, 0, 0, 0.7);
     padding-top: 60px;
     padding-bottom: 100px;
+
+    @include mobile {
+      padding-bottom: 75px;
+    }
   }
 
   &__subtitle {
@@ -43,6 +60,14 @@
     color: var(--color-primary);
     text-shadow: -2px 2px 2px rgba(109, 109, 108, 0.68);
     z-index: 2;
+
+    @include mobile {
+      font-size: 28px;
+    }
+
+    @include mobile-s {
+      font-size: 24px;
+    }
   }
 
   &__form {
@@ -56,15 +81,47 @@
     z-index: 2;
   }
 
+  &__input {
+    @include mobile {
+      font-size: 16px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+
+    @include mobile-s {
+      font-size: 14px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
   &__text {
     font-size: 24px;
     font-weight: 700;
     color: var(--color-off-white);
     text-transform: uppercase;
     text-shadow: -1px 1px 1px rgba(109, 109, 108, 0.46);
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+    @include mobile-s {
+      font-size: 18px;
+      text-align: center;
+    }
   }
 
   &__button {
     padding: 12px 20px;
+
+    @include mobile-s {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
   }
 }

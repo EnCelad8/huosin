@@ -12,6 +12,22 @@
     justify-content: flex-end;
     gap: 80px;
     padding-block: 76px;
+
+    @include tablet {
+      gap: 40px;
+    }
+
+    @media (max-width: 860px) {
+      padding-bottom: 30px;
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+
+    @include mobile-s {
+      gap: 60px;
+    }
   }
 
   &__title {
@@ -19,6 +35,14 @@
     font-weight: 700;
     color: var(--color-secondary);
     text-shadow: -2px 2px 2px rgba(109, 109, 108, 0.68);
+
+    @media (max-width: 1070px) {
+      font-size: 40px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   &__yellow-text {
@@ -30,6 +54,14 @@
     font-weight: 500;
     color: var(--color-light-gray);
     text-shadow: -2px 2px 2px rgba(109, 109, 108, 0.68);
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__separate-img {

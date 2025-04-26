@@ -16,7 +16,7 @@
     right: 100%;
     bottom: 0;
     height: 100%;
-    width: 50%;
+    width: 100%;
 
     background-color: rgb(182, 181, 174, 0.3);
     // box-shadow: -2px 3px 4px rgba(57, 55, 54, 0.35);
@@ -26,6 +26,10 @@
     display: flex;
     align-items: center;
     gap: 12px;
+
+    @include mobile {
+      gap: 5px;
+    }
   }
 
   &__link {
@@ -33,6 +37,10 @@
     font-family: var(--font-family-accent);
     color: var(--color-dark-gray);
     text-transform: uppercase;
+
+    @include mobile {
+      font-size: 13px;
+    }
   }
 
   &__item {
@@ -44,6 +52,10 @@
     &:not(:first-child)::before {
       content: url('/src/assets/images/breadcrumbs/breadcrumbs-arrow.svg');
       color: var(--color-dark-gray);
+    }
+
+    @include mobile {
+      gap: 8px;
     }
   }
 
@@ -58,5 +70,10 @@
     white-space: nowrap;
 
     border-radius: 40px;
+
+    @include mobile {
+      font-size: 13px;
+      padding: 6px 16px;
+    }
   }
 }

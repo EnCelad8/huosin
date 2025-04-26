@@ -10,5 +10,18 @@
     color: var(--color-primary);
     text-transform: uppercase;
     padding-block: 100px;
+
+    @include tablet {
+      font-size: 60px;
+    }
+
+    @include mobile {
+      font-size: 35px;
+      padding-block: 60px;
+    }
+
+    @include mobile-s {
+      font-size: 25px;
+    }
   }
 }

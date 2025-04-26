@@ -8,9 +8,9 @@
     <script src="/src/scripts/main.js" type="module" defer></script>
   </head>
   <body>
-    <header class="header header--white header--absolute">
-      <div class="header__body container">
-        <div class="header__left">
+    <header class="header header--absolute header--white" data-js-header>
+      <div class="header__body">
+        <div class="header__inner container">
           <a class="header__logo logo" href="/" aria-label="Home" title="Home">
             <img
               src="src/assets/images/logo.png"
@@ -19,33 +19,47 @@
               height="32"
             />
           </a>
-          <nav class="header__menu">
-            <ul class="header__menu-list">
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> Главная </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> Продукция </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link is-active" href="/"> О Компании </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="/"> Контакты </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a class="header__menu-link is-active" href="/"> Главная </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> Продукция </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> О Компании </a>
+                </li>
+                <li class="header__menu-item">
+                  <a class="header__menu-link" href="/"> Контакты </a>
+                </li>
+              </ul>
+            </nav>
+            <a href="/" class="header__contact-us-link button"
+              >Заказать звонок</a
+            >
+          </div>
+          <button
+            class="header__burger-button burger-button visible-mobile-only"
+            data-js-header-burger-button
+            type="button"
+            aria-label="Открыть меню"
+          >
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
         </div>
-        <a href="/" class="header__contact-us-link button">Заказать звонок</a>
       </div>
     </header>
     <main>
       <section class="hero-contacts">
         <div class="hero-contacts__wrapper">
-          <img
+          <!-- <img
             class="hero-contacts__image"
             src="/src/assets/images/hero-contacts/hero-contacts-bg.png"
-          />
+          /> -->
         </div>
 
         <div class="hero-contacts__header">
@@ -113,50 +127,52 @@
           </div>
         </div>
         <div class="contact-info__body">
-          <div class="contact-info__map">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A19e0e06062be50dade979f5034abdc71b50625d63fec9808acca4be8292cfc6c&amp;source=constructor"
-              width="100%"
-              height="100%"
-              frameborder="0"
-            ></iframe>
-          </div>
-          <div class="contact-info__connections">
-            <ul class="contact-info__list communication-list">
-              <li class="communication-list__item">
-                <img
-                  src="./src/assets/images/contact/icons/icon-phone.svg"
-                  alt="Телефон"
-                />
-                <span class="communication-list__text">+7 812 292-00-75</span>
-              </li>
-              <li class="communication-list__item">
-                <img
-                  src="./src/assets/images/contact/icons/icon-time.svg"
-                  alt="Время работы"
-                />
-                <span class="communication-list__text">
-                  <time datetime="09:00-17:30">Пн-Пт 9:00–17:30</time>
-                </span>
-              </li>
-              <li class="communication-list__item">
-                <img
-                  src="./src/assets/images/contact/icons/icon-email.svg"
-                  alt="Электронная почта"
-                />
-                <span class="communication-list__text">sales@huosin.ru</span>
-              </li>
-              <li class="communication-list__item">
-                <img
-                  src="./src/assets/images/contact/icons/icon-location.svg"
-                  alt="Адрес"
-                />
-                <address class="communication-list__text">
-                  196603, Россия, г. Санкт-Петербург, г. Пушкин, ул. Гусарская,
-                  д. 4Ц
-                </address>
-              </li>
-            </ul>
+          <div class="contact-info__content">
+            <div class="contact-info__map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A19e0e06062be50dade979f5034abdc71b50625d63fec9808acca4be8292cfc6c&amp;source=constructor"
+                width="100%"
+                height="100%"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <div class="contact-info__connections">
+              <ul class="contact-info__list communication-list">
+                <li class="communication-list__item">
+                  <img
+                    src="./src/assets/images/contact/icons/icon-phone.svg"
+                    alt="Телефон"
+                  />
+                  <span class="communication-list__text">+7 812 292-00-75</span>
+                </li>
+                <li class="communication-list__item">
+                  <img
+                    src="./src/assets/images/contact/icons/icon-time.svg"
+                    alt="Время работы"
+                  />
+                  <span class="communication-list__text">
+                    <time datetime="09:00-17:30">Пн-Пт 9:00–17:30</time>
+                  </span>
+                </li>
+                <li class="communication-list__item">
+                  <img
+                    src="./src/assets/images/contact/icons/icon-email.svg"
+                    alt="Электронная почта"
+                  />
+                  <span class="communication-list__text">sales@huosin.ru</span>
+                </li>
+                <li class="communication-list__item">
+                  <img
+                    src="./src/assets/images/contact/icons/icon-location.svg"
+                    alt="Адрес"
+                  />
+                  <address class="communication-list__text">
+                    196603, Россия, г. Санкт-Петербург, г. Пушкин, ул.
+                    Гусарская, д. 4Ц
+                  </address>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -181,7 +197,7 @@
                 <a class="footer__link" href="/">Продукция</a>
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="./about.html">О Компании</a>
+                <a class="footer__link" href="/">О Компании</a>
               </li>
               <li class="footer__item">
                 <a class="footer__link" href="/">Контакты</a>
@@ -197,7 +213,7 @@
             />
           </a>
         </div>
-        <div class="container">
+        <div class="footer__bottom container">
           <p class="footer__desc">
             Смазочные материалы высокого качества для волочения медной
             и алюминиевой проволоки

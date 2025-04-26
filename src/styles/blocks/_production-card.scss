@@ -1,13 +1,25 @@
 @use '../helpers' as *;
 
 .production-card {
-  &__img {
+  @include mobile {
     max-width: 350px;
+    min-height: 489px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 350px;
   }
 
   &__main {
     background-color: rgb(255, 255, 255, 0.7);
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -15,6 +27,7 @@
     flex-direction: column;
     gap: 12px;
     padding: 15px 25px 15px;
+    flex: 1;
   }
 
   &__name {
@@ -35,30 +48,29 @@
   }
 
   &__link {
-    margin-right: auto;
-    width: 50%;
+    width: 45%;
   }
 
   &--swiper {
-    display: grid;
-    // min-width: 350px;
+    display: flex;
+
     height: 490px;
+    width: 350px;
+
+    justify-content: center;
 
     .production-card__main {
+      max-width: 350px;
+      min-height: 490px;
       flex-direction: column;
-    }
-
-    .production-card__content {
-      flex: 1;
     }
 
     .production-card__link {
       margin-left: auto;
-      margin-right: 0;
     }
 
     .production-card__img {
-      width: 100%;
+      // width: 100%;
     }
   }
 }

@@ -4,10 +4,26 @@
   background-color: var(--color-black);
   padding-block: 100px;
 
+  @include mobile {
+    padding-block: 50px;
+  }
+
   &__text {
     font-size: 38px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--color-secondary);
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 29px;
+    }
+
+    @include mobile-s {
+      font-size: 24px;
+    }
   }
 }

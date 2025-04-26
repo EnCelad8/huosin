@@ -77,15 +77,13 @@
                   >Оформить заявку сейчас</a
                 >
               </div>
-              <div class="hero__image-box">
+              <!-- <div class="hero__img-box">
                 <img
                   class="hero__image"
                   src="src/assets/images/hero-img.png"
                   alt="Масло"
-                  width="830"
-                  height="901"
                 />
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
@@ -116,8 +114,6 @@
                 class="about__image"
                 src="src/assets/images/about/certificate.jpg"
                 alt="Сертификат"
-                width="505"
-                height="710"
               />
             </div>
             <div class="about__bottom about__row">
@@ -133,7 +129,7 @@
       <section class="production">
         <div class="production__header section-header">
           <div class="section-header--bg">
-            <div class="container">
+            <div class="container production__inner">
               <div class="production__desc">
                 <h2 class="section-header__title section-header__title--yellow">
                   Продукция
@@ -152,7 +148,7 @@
           <div class="container">
             <div class="swiper my-swiper">
               <div class="swiper-buttons">
-                <div class="swiper-btn swiper-button-prev">
+                <div class="swiper-btn my-prev-btn">
                   <svg
                     width="13"
                     height="22"
@@ -166,7 +162,7 @@
                     />
                   </svg>
                 </div>
-                <div class="swiper-btn swiper-button-next">
+                <div class="swiper-btn my-next-btn">
                   <svg
                     width="13"
                     height="22"
@@ -496,7 +492,7 @@
           <div class="testimonials__main container">
             <div class="swiper second-swiper">
               <div class="swiper-buttons">
-                <div class="swiper-btn swiper-button-prev">
+                <div class="swiper-btn my-prev-btn">
                   <svg
                     width="13"
                     height="22"
@@ -510,7 +506,7 @@
                     />
                   </svg>
                 </div>
-                <div class="swiper-btn swiper-button-next">
+                <div class="swiper-btn my-next-btn">
                   <svg
                     width="13"
                     height="22"
@@ -531,7 +527,6 @@
                     class="review__img"
                     src="./src/assets/images/testimonials/testimonials-review-1.jpg"
                     alt="Изображение отзыва"
-                    width="348"
                   />
                   <div class="review__right-box">
                     <h3 class="review__company">Компания: «ЛУБТЕХ»</h3>
@@ -566,8 +561,6 @@
                     class="review__img"
                     src="./src/assets/images/testimonials/testimonials-review-2.jpg"
                     alt="Изображение отзыва"
-                    width="348"
-                    height="478"
                   />
                   <div class="review__right-box">
                     <h3 class="review__company">Компания: «ЛУБТЕХ»</h3>
@@ -609,8 +602,6 @@
                     class="review__img"
                     src="./src/assets/images/testimonials/testimonials-review-3.jpg"
                     alt="Изображение отзыва"
-                    width="348"
-                    height="478"
                   />
                   <div class="review__right-box">
                     <h3 class="review__company">Компания: «ЛУБТЕХ»</h3>
@@ -651,8 +642,6 @@
                     class="review__img"
                     src="./src/assets/images/testimonials/testimonials-review-4.jpg"
                     alt="Изображение отзыва"
-                    width="348"
-                    height="478"
                   />
                   <div class="review__right-box">
                     <h3 class="review__company">Компания: «ЛУБТЕХ»</h3>
@@ -707,36 +696,69 @@
         </div>
         <div class="contact__body container connect-us">
           <div class="connect-us__main">
-            <form class="connect-us__form" action="/">
+            <form class="connect-us__form" action="/" novalidate data-js-form>
               <h3 class="connect-us__title">
                 Сотрудники компании помогут найти оптимальное решение ваших
                 задач
               </h3>
-              <label class="visually-hidden" for="phone">Телефон</label>
-              <input
-                class="connect-us__input input"
-                id="phone"
-                type="tel"
-                placeholder="Телефон"
-                pattern="[\+]?[0-9\s\(\)-]+"
-                required
-              />
-              <label class="visually-hidden" for="email">Почта</label>
-              <input
-                class="connect-us__input input"
-                id="email "
-                type="email"
-                placeholder="Email"
-                required
-              />
-              <label class="visually-hidden" for="name">Имя</label>
-              <input
-                class="connect-us__input input"
-                id="name "
-                type="text"
-                placeholder="Имя"
-                required
-              />
+              <div class="connect-us__field">
+                <label class="visually-hidden" for="phone">Телефон</label>
+                <input
+                  class="connect-us__input input"
+                  id="phone"
+                  type="tel"
+                  placeholder="Телефон"
+                  minlength="7"
+                  maxlength="20"
+                  pattern="^((8|\+374|\+994|\+995|\+375|\+7|\+380|\+38|\+996|\+998|\+993)[\- ]?)?\(?\d{3,5}\)?[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}(([\- ]?\d{1})?[\- ]?\d{1})?$
+                  "
+                  required
+                  aria-errormessage="phone-errors"
+                />
+                <span
+                  class="connect-us__errors"
+                  id="phone-errors"
+                  data-js-form-errors
+                ></span>
+              </div>
+              <div class="connect-us__field">
+                <label class="visually-hidden" for="email">Почта</label>
+                <input
+                  class="connect-us__input input"
+                  id="email"
+                  type="email"
+                  minlength="5"
+                  maxlength="254"
+                  placeholder="Email"
+                  required
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                  aria-errormessage="email-errors"
+                />
+                <span
+                  class="connect-us__errors"
+                  id="email-errors"
+                  data-js-form-errors
+                ></span>
+              </div>
+              <div class="connect-us__field">
+                <label class="visually-hidden" for="name">Имя</label>
+                <input
+                  class="connect-us__input input"
+                  id="name"
+                  type="text"
+                  placeholder="Имя"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  pattern="^[а-яА-ЯёЁa-zA-Z\s-]{2,}$"
+                  aria-errormessage="name-errors"
+                />
+                <span
+                  class="connect-us__errors"
+                  id="name-errors"
+                  data-js-form-errors
+                ></span>
+              </div>
               <button class="connect-us__button button" type="submit">
                 Получить консультацию
               </button>
@@ -826,7 +848,7 @@
             />
           </a>
         </div>
-        <div class="container">
+        <div class="footer__bottom container">
           <p class="footer__desc">
             Смазочные материалы высокого качества для волочения медной
             и алюминиевой проволоки
