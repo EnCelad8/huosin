@@ -474,7 +474,33 @@
             </div>
           </div>
         </div>
-        <div class="advantages__bottom-img" role="img"></div>
+        <div class="advantages__bottom">
+          <div class="swiper photo-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  class="advantages__slide-img"
+                  src="/src/assets/images/advantages/slider/image_carousel_1.jpg"
+                  alt="Слайд 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="advantages__slide-img"
+                  src="/src/assets/images/advantages/slider/image_carousel_2.jpg"
+                  alt="Слайд 2"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="advantages__slide-img"
+                  src="/src/assets/images/advantages/slider/image_carousel_3.jpg"
+                  alt="Слайд 3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="testimonials">
         <div class="testimonials__header section-header">
@@ -710,8 +736,7 @@
                   placeholder="Телефон"
                   minlength="7"
                   maxlength="20"
-                  pattern="^((8|\+374|\+994|\+995|\+375|\+7|\+380|\+38|\+996|\+998|\+993)[\- ]?)?\(?\d{3,5}\)?[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}(([\- ]?\d{1})?[\- ]?\d{1})?$
-                  "
+                  pattern="^(\+7|\+374|\+994|\+995|\+375|\+380|\+38|\+996|\+998|\+993|8)\s?\(?\d{2,5}\)?[\s\-]?\d{2,3}[\s\-]?\d{2}[\s\-]?\d{2,3}$"
                   required
                   aria-errormessage="phone-errors"
                 />

@@ -96,6 +96,8 @@
     }
 
     @include mobile {
+      padding: 15px;
+
       &::before {
         height: 180%;
       }

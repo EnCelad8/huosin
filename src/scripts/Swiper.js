@@ -65,3 +65,14 @@ initSwiper('.my-swiper', {
     },
   },
 });
+
+initSwiper('.photo-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+});

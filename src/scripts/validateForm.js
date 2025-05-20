@@ -7,6 +7,8 @@ export function setupFormValidation() {
   const dataFieldsErrors = '[data-js-form-errors]';
 
   document.addEventListener('blur', onBlur, { capture: true });
+  document.addEventListener('change', onChange);
+  document.addEventListener('submit', onSubmit);
 
   const errorMessages = {
     valueMissing: () => 'Пожалуйста, заполните это поле',
@@ -18,8 +20,12 @@ export function setupFormValidation() {
   };
 
   function manageErrors(fieldElement, messages) {
-    const fieldErrorsElement = fieldElement.parentElement;
-    console.log(fieldErrorsElement);
+    const fieldErrorsElement =
+      fieldElement.parentElement.querySelector(dataFieldsErrors);
+
+    fieldErrorsElement.innerHTML = messages
+      .map((msg) => `<span class="connect-us__error">${msg}</span>`)
+      .join('  ');
   }
 
   function validateField(fieldElement) {
@@ -33,17 +39,75 @@ export function setupFormValidation() {
     });
 
     manageErrors(fieldElement, messages);
+
+    const isValid = messages.length === 0;
+
+    fieldElement.ariaInvalid = !isValid;
+
+    console.log(messages);
+    return isValid;
   }
 
   function onBlur(event) {
     const { target } = event;
-    console.log(target);
+    // console.log(target);
 
     const isFormField = target.closest(dataForm);
     const isRequired = target.required;
 
     if (isFormField && isRequired) {
       validateField(target);
+    }
+  }
+
+  function onChange(event) {
+    const { target } = event;
+
+    const isRequired = target.required;
+
+    if (isRequired) {
+      validateField(target);
+    }
+  }
+
+  function onSubmit(event) {
+    // event.preventDefault();
+    const isFormElement = event.target.matches(dataForm);
+
+    if (!isFormElement) {
+      return;
+    }
+    const requiredElements = [...event.target.elements].filter(
+      (el) => el.required,
+    );
+    console.log(requiredElements);
+
+    let invalidElement = null;
+    let isFormValid = true;
+    requiredElements.forEach((el) => {
+      const isFieldValid = validateField(el);
+
+      if (!isFieldValid) {
+        isFormValid = false;
+
+        if (!invalidElement) {
+          invalidElement = el;
+        }
+      }
+    });
+    // const isFormValid = requiredElements.every((el) => {
+    //   const isValid = validateField(el);
+
+    //   if (!isValid && !invalidElement) {
+    //     invalidElement = el;
+    //   }
+
+    //   return isValid;
+    // });
+
+    if (!isFormValid) {
+      event.preventDefault();
+      invalidElement.focus();
     }
   }
 

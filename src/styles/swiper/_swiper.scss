@@ -3,15 +3,19 @@
 .swiper {
   width: 100%;
   overflow: hidden;
-  max-width: 1110px;
 
   .my-swiper {
+    max-width: 1110px;
+
     display: flex;
     justify-items: center;
 
     @media (max-width: 1160px) {
       max-width: 850px;
     }
+  }
+
+  .photo-swiper {
   }
 }
 
