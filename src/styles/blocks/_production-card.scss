@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .production-card {
+
   @include mobile {
     max-width: 350px;
     min-height: 489px;
@@ -53,14 +54,16 @@
 
   &--swiper {
     display: flex;
-
     height: 490px;
-    width: 350px;
+
+    img{
+      width: 100%;
+    }
 
     justify-content: center;
 
     .production-card__main {
-      max-width: 350px;
+      //max-width: 350px;
       min-height: 490px;
       flex-direction: column;
     }
@@ -85,5 +88,11 @@
     font-size: 13px;
     color: var(--color-dark-gray);
     white-space: nowrap;
+  }
+}
+
+.production-card--swiper{
+  @include mobile {
+    max-width: 100%;
   }
 }

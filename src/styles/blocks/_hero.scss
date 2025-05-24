@@ -12,7 +12,7 @@
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
-    overflow-x: hidden;
+    //overflow-x: hidden;
   }
 
   &__body {
@@ -45,20 +45,21 @@
   }
 
   &__img-box {
-    position: relative;
-    width: 46%;
+    //position: relative;
+    //width: 46%;
   }
 
   &__image {
     position: absolute;
     top: -220px;
-    left: 520px;
     display: block;
     width: 1400px;
     overflow-x: auto;
     height: auto;
-    z-index: 20;
+    z-index: auto;
     pointer-events: none;
     user-select: none;
+    right: -600px;
+    left: auto;
   }
 }

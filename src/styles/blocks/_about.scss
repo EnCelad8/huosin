@@ -3,13 +3,13 @@
 .about {
   // background-color: var(--color-background);
   position: relative;
-  padding-top: 250px;
+  //padding-top: 250px;
   padding-bottom: 75px;
   overflow-x: hidden;
 
   &__top {
     position: relative;
-    margin-top: 150px;
+    margin-top: 140px;
 
     padding-top: 75px;
     border-top: 67px solid var(--color-black);
@@ -23,7 +23,7 @@
       position: absolute;
       bottom: 100%;
       left: 100%;
-      width: 15%;
+      width: 100%;
       background-color: var(--color-black);
       height: 67px;
     }
@@ -81,6 +81,7 @@
       position: absolute;
       height: 200%;
       width: 10px;
+
       background: linear-gradient(
         180deg,
         #040000 0%,
@@ -116,7 +117,7 @@
       left: 100%;
       background-color: var(--color-black);
       height: 100%;
-      width: 15%;
+      width: 100%;
     }
   }
 
@@ -148,6 +149,8 @@
 
   &__catalog-link {
     margin-top: 125px;
+    width: 350px;
+    max-width: 100%;
 
     @include tablet {
       margin-top: 80px;
