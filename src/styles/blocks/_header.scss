@@ -48,7 +48,7 @@
       justify-content: center;
       align-items: center;
       gap: 30px;
-      z-index: 15;
+      z-index: 10;
 
       &:not(.is-active) {
         @include hide;
@@ -86,7 +86,7 @@
   }
 
   &__contact-us-link {
-    @media (max-width: 950px) {
+    @media (max-width: 930px) {
       margin-left: auto;
       margin-top: 20px;
     }

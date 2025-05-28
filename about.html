@@ -84,13 +84,13 @@
               продукты бренда эталоном в сфере металлообработки.
             </p>
           </div>
-          <!-- <div class="brand__image-wrapper"> -->
-          <img
-            class="brand__image"
-            src="/src/assets/images/brand/brand-image.jpg"
-            alt="Человек с микроскопом"
-          />
-          <!-- </div> -->
+          <div class="brand__image-wrapper">
+            <img
+              class="brand__image"
+              src="/src/assets/images/brand/brand-image.jpg"
+              alt="Человек с микроскопом"
+            />
+          </div>
         </div>
       </section>
       <section class="assortment">
@@ -224,36 +224,68 @@
       <section class="contact-about">
         <div class="contact-about__body container connect-us">
           <div class="connect-us__main">
-            <form class="connect-us__form" action="/">
+            <form class="connect-us__form" action="/" novalidate data-js-form>
               <h3 class="connect-us__title">
                 Сотрудники компании помогут найти оптимальное решение ваших
                 задач
               </h3>
-              <label class="visually-hidden" for="phone">Телефон</label>
-              <input
-                class="connect-us__input input"
-                id="phone"
-                type="tel"
-                placeholder="Телефон"
-                pattern="[\+]?[0-9\s\(\)-]+"
-                required
-              />
-              <label class="visually-hidden" for="email">Почта</label>
-              <input
-                class="connect-us__input input"
-                id="email "
-                type="email"
-                placeholder="Email"
-                required
-              />
-              <label class="visually-hidden" for="name">Имя</label>
-              <input
-                class="connect-us__input input"
-                id="name "
-                type="text"
-                placeholder="Имя"
-                required
-              />
+              <div class="connect-us__field">
+                <label class="visually-hidden" for="phone">Телефон</label>
+                <input
+                  class="connect-us__input input"
+                  id="phone"
+                  type="tel"
+                  placeholder="Телефон"
+                  minlength="7"
+                  maxlength="20"
+                  pattern="^(\+7|\+374|\+994|\+995|\+375|\+380|\+38|\+996|\+998|\+993|8)\s?\(?\d{2,5}\)?[\s\-]?\d{2,3}[\s\-]?\d{2}[\s\-]?\d{2,3}$"
+                  required
+                  aria-errormessage="phone-errors"
+                />
+                <span
+                  class="connect-us__errors"
+                  id="phone-errors"
+                  data-js-form-errors
+                ></span>
+              </div>
+              <div class="connect-us__field">
+                <label class="visually-hidden" for="email">Почта</label>
+                <input
+                  class="connect-us__input input"
+                  id="email"
+                  type="email"
+                  minlength="5"
+                  maxlength="254"
+                  placeholder="Email"
+                  required
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                  aria-errormessage="email-errors"
+                />
+                <span
+                  class="connect-us__errors"
+                  id="email-errors"
+                  data-js-form-errors
+                ></span>
+              </div>
+              <div class="connect-us__field">
+                <label class="visually-hidden" for="name">Имя</label>
+                <input
+                  class="connect-us__input input"
+                  id="name"
+                  type="text"
+                  placeholder="Имя"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  pattern="^[а-яА-ЯёЁa-zA-Z\s-]{2,}$"
+                  aria-errormessage="name-errors"
+                />
+                <span
+                  class="connect-us__errors"
+                  id="name-errors"
+                  data-js-form-errors
+                ></span>
+              </div>
               <button class="connect-us__button button" type="submit">
                 Получить консультацию
               </button>
